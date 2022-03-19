@@ -1,4 +1,4 @@
-package ru.liga.linear;
+package ru.liga.forecasting.algorithm.linear;
 
 public class LinearRegression {
     private final Double intercept, slope;

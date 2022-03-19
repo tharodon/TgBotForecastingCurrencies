@@ -29,7 +29,6 @@ public abstract class ServiceCommand extends BotCommand {
             absSender.execute(message);
         } catch (TelegramApiException e) {
             //логируем сбой Telegram Bot API, используя commandName и userName
-            e.printStackTrace();
         }
     }
 

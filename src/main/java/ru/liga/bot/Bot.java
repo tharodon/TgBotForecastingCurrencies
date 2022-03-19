@@ -8,6 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiRequestException;
 import ru.liga.bot.command.HelpCommand;
 import ru.liga.forecasting.Forecasting;
 import ru.liga.bot.command.StartCommand;
@@ -97,7 +98,7 @@ public final class Bot extends TelegramLongPollingCommandBot {
                 execute(content.getPhoto());
             else
                 execute(content.getMessageText());
-        } catch (TelegramApiException e) {
+        } catch (Exception e) {
             logger.debug("Не удалось отправить сообщение: " + e.getMessage());
         }
     }
@@ -109,7 +110,7 @@ public final class Bot extends TelegramLongPollingCommandBot {
         message.setText(text);
         try {
             execute(message);
-        } catch (TelegramApiException e) {
+        } catch (Exception e) {
             logger.debug("Не удалось отправить сообщение: " + e.getMessage());
         }
     }

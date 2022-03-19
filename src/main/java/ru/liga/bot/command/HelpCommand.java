@@ -15,15 +15,15 @@ public class HelpCommand extends ServiceCommand{
 
     @Override
     public void execute(AbsSender absSender, User user, Chat chat, String[] strings) {
-        logger.info("/help was executed");
-        logger.debug("/help was executed");
-        String userName = (user.getUserName() != null) ? user.getUserName() :
-                String.format("%s %s", user.getLastName(), user.getFirstName());
-        sendAnswer(absSender, chat.getId(), this.getCommandIdentifier(), userName,
-                "Запрос состоит из: \n1) Ключевое слово 'rate'\n" +
-                        "2) Желаемые курсы валют через запятую (EUR, TRY, USD, ...)\n" +
-                        "3) -date Дата в формате: [day.month.year]/-period [month/week]\n" +
-                        "4) -alg [actual, linear, mystical]\n" +
-                        "5) Если хочешь с выводом на график, то дабавь флаг '-output graph'");
+            logger.info("/help was executed");
+            logger.debug("/help was executed");
+            String userName = (user.getUserName() != null) ? user.getUserName() :
+                    String.format("%s %s", user.getLastName(), user.getFirstName());
+            sendAnswer(absSender, chat.getId(), this.getCommandIdentifier(), userName,
+                    "Запрос состоит из: \n1) Ключевое слово 'rate'\n" +
+                            "2) Желаемые курсы валют через запятую (EUR, TRY, USD, ...)\n" +
+                            "3) -date Дата в формате: [day.month.year]/-period [month/week]\n" +
+                            "4) -alg [actual, linear, mystical]\n" +
+                            "5) Если хочешь с выводом на график, то дабавь флаг '-output graph'");
     }
 }
