@@ -3,19 +3,14 @@ package ru.liga.bot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.telegram.telegrambots.extensions.bots.commandbot.TelegramLongPollingCommandBot;
-import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
-import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import ru.liga.Forecasting;
-import ru.liga.bot.command.JokeCommand;
 import ru.liga.bot.command.StartCommand;
 import ru.liga.parser.InputParser;
-
-import java.io.File;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.util.*;
@@ -28,20 +23,22 @@ public final class Bot extends TelegramLongPollingCommandBot {
 
     public Bot(String botName, String botToken) {
         super();
+        logger.debug("Начинается создание бота");
         this.BOT_NAME = botName;
         this.BOT_TOKEN = botToken;
         register(new StartCommand("start", "Старт"));
-        register(new JokeCommand("joke", "Анекдот"));
-        logger.info("Бот создан");
+        logger.debug("Бот создан");
     }
 
     @Override
     public String getBotToken() {
+        logger.debug("getBotToken was called.");
         return BOT_TOKEN;
     }
 
     @Override
     public String getBotUsername() {
+        logger.debug("getBotUsername was called.");
         return BOT_NAME;
     }
 
@@ -50,22 +47,27 @@ public final class Bot extends TelegramLongPollingCommandBot {
      */
     @Override
     public void processNonCommandUpdate(Update update) {
+        logger.debug("processNonCommandUpdate was called.");
         Message msg = update.getMessage();
         Long chatId = msg.getChatId();
         String userName = getUserName(msg);
         List<Map<LocalDate, Double>> result;
         ContentType contentType;
 
+        logger.debug("Начинается обработка запроса " + msg.getText());
+        logger.info("Начинается обработка запроса " + msg.getText());
         Map<LocalDate, Double> date = new LinkedHashMap<>();
         try{
             Forecasting forecast = new Forecasting(new InputParser(msg.getText()));
-            contentType = new ContentType(forecast.isGraph());
             result = forecast.forecasting();
+            contentType = new ContentType(forecast.isGraph());
             contentType.setContent(result, chatId.toString());
             setAnswer(chatId, userName, contentType);
         }catch (DateTimeException e){
+            logger.debug("ERROR: " + e.getMessage());
             setAnswer(chatId,"Incorrect date. Please, write date in format \'dd.MM.yyyy\'");
         } catch (Exception e){
+            logger.debug("ERROR: " + e.getMessage());
             setAnswer(chatId, e.getMessage());
         }
     }
@@ -75,6 +77,7 @@ public final class Bot extends TelegramLongPollingCommandBot {
      * @param msg сообщение
      */
     private String getUserName(Message msg) {
+        logger.debug("getUserName was called.");
         User user = msg.getFrom();
         String userName = user.getUserName();
         return (userName != null) ? userName : String.format("%s %s", user.getLastName(), user.getFirstName());
@@ -86,23 +89,26 @@ public final class Bot extends TelegramLongPollingCommandBot {
      * @param userName имя пользователя
      */
     private void setAnswer(Long chatId, String userName, ContentType content) {
-
+        logger.debug("setAnswer was called.");
         try {
             if (content.isGraph())
                 execute(content.getPhoto());
             else
                 execute(content.getMessageText());
         } catch (TelegramApiException e) {
+            logger.debug("Не удалось отправить сообщение: " + e.getMessage());
         }
     }
 
     private void setAnswer(Long chatId, String text) {
+        logger.debug("setAnswer was called.");
         SendMessage message = new SendMessage();
         message.setChatId(chatId.toString());
         message.setText(text);
         try {
             execute(message);
         } catch (TelegramApiException e) {
+            logger.debug("Не удалось отправить сообщение: " + e.getMessage());
         }
     }
 }

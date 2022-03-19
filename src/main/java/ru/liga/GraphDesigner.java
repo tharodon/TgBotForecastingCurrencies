@@ -2,6 +2,8 @@ package ru.liga;
 
 import com.github.sh0nk.matplotlib4j.Plot;
 import com.github.sh0nk.matplotlib4j.PythonExecutionException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -11,8 +13,10 @@ import java.util.Map;
 
 public class GraphDesigner {
 
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     public void draw(List<Map<LocalDate, Double>> coordinates){
+        logger.debug("draw was called.");
         Plot plt = Plot.create();
 
         for (int i = 0; i < coordinates.size(); i++){
@@ -26,14 +30,14 @@ public class GraphDesigner {
             }
             plt.plot().add(y, x);
         }
-        plt.xlabel("Currency");
-        plt.ylabel("Date");
+        plt.ylabel("Currency");
+        plt.xlabel("Date");
         plt.title("Forecasting");
         plt.savefig("src/main/resources/graf.png").dpi(200);
         try{
             plt.executeSilently();
         }catch (IOException | PythonExecutionException e) {
-            e.printStackTrace();
+            logger.debug("ERROR: " + e.getMessage());
         }
     }
 }
