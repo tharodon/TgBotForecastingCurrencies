@@ -1,5 +1,7 @@
 package ru.liga;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.liga.parser.DAOCurrency;
 import ru.liga.parser.DateAndCurrencies;
 import ru.liga.parser.InputParser;
@@ -16,17 +18,10 @@ import java.util.*;
 public class Forecasting {
     private InputParser input;
 
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     public Forecasting(InputParser input) {
         this.input = input;
-    }
-
-    private BigDecimal average(BigDecimal[] x){
-        BigDecimal sum = BigDecimal.valueOf(0.0);
-
-        for (int i = 0; i < CountDays.DAYS_OF_WEEK; i++){
-            sum = x[i].add(sum);
-        }
-        return sum.divide(BigDecimal.valueOf(x.length), RoundingMode.HALF_UP);
     }
 
     public boolean isGraph(){
@@ -34,6 +29,8 @@ public class Forecasting {
     }
 
     public List<Map<LocalDate, Double>> forecasting() throws Exception {
+        logger.debug("forecasting was called. Начало вычислений");
+        logger.info("Начало вычислений");
         DAOCurrency daoCurrency = new DAOCurrency();
         input.isAllOkay();
         String[] currencies = input.getCurrency();
@@ -46,10 +43,12 @@ public class Forecasting {
             double[] answer = new double[0];
             switch (input.getAlgorithm()) {
                 case ("ACTUAL"): {
+                    logger.debug("Начало вычислений по алгоритму \"Актуальный\"");
                     answer = forecastActual(dateAndCurrencies.getInformation(), input.getDates());
                     break;
                 }
                 case ("LINEAR"): {
+                    logger.debug("Начало вычислений по алгоритму \"Линейная регрессия\"");
                     int[] predictors = new int[dates.size()];
                     for (int i = 0; i < dates.size(); i++) {
                         predictors[i] = (int) dateAndCurrencies.differenceDates(dates.get(i), dateAndCurrencies.getDates().get(0)) + 30;
@@ -58,6 +57,7 @@ public class Forecasting {
                     break;
                 }
                 case ("MYSTICAL"): {
+                    logger.debug("Начало вычислений по алгоритму \"Мистичесикй\"");
                     answer = forecastMystical(dateAndCurrencies, input.getDates());
                     break;
                 }
@@ -83,6 +83,7 @@ public class Forecasting {
     }
 
     public double[] forecastMystical(DateAndCurrencies info, List<LocalDate> forecast){
+        logger.debug("forecastMystical was called");
         Map<LocalDate, Double> currencies = info.getInformation();
         List<Double> fullMoonsCurrencies = new ArrayList<>();
         double[] forecastReturn = new double[forecast.size()];
@@ -101,16 +102,23 @@ public class Forecasting {
     }
 
     public double[] forecastActual(Map<LocalDate, Double> dateAndCurrencies, List<LocalDate> forecast){
-        Double[] currencies = new Double[2];
         double[] forecastReturn = new double[forecast.size()];
-        for (int i = 0; i < forecast.size(); i++){
-            forecastReturn[i] = dateAndCurrencies.get(forecast.get(i).minusYears(2))
-                    + dateAndCurrencies.get(forecast.get(i).minusYears(3));
+        try{
+            logger.debug("forecastActual was called");
+            Double[] currencies = new Double[2];
+            for (int i = 0; i < forecast.size(); i++) {
+                forecastReturn[i] = dateAndCurrencies.get(forecast.get(i).minusYears(2))
+                        + dateAndCurrencies.get(forecast.get(i).minusYears(3));
+            }
+        }catch (NullPointerException e){
+            logger.debug("Выбрана некорректная дата прогноза");
+            throw new IllegalArgumentException("Выбрана некорректная дата прогноза");
         }
         return forecastReturn;
     }
 
     public double[] forecastLinearregression(DateAndCurrencies dateAndCurrencies, int[] predictors){
+        logger.debug("forecastLinearregression was called");
         Double[] x = new Double[30];
         Double[] y = new Double[30];
         List<Double> curr = dateAndCurrencies.getCurrencySortedToData();

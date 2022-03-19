@@ -1,5 +1,8 @@
 package ru.liga.parser;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
@@ -9,6 +12,8 @@ public class DateAndCurrencies {
     private final List<LocalDate> dates;
     private final Map<LocalDate, Double> information;
     private final List<LocalDate> fullMoons;
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     public DateAndCurrencies() {
         currency = new ArrayList<>();
@@ -27,8 +32,8 @@ public class DateAndCurrencies {
         return information;
     }
 
-    void available(Double cur, LocalDate date)
-    {
+    void available(Double cur, LocalDate date) {
+        logger.debug("available was called.");
         if (dates.isEmpty()){
             currency.add(cur);
             dates.add(date);
@@ -63,6 +68,7 @@ public class DateAndCurrencies {
     }
 
     public List<Double> getCurrencySortedToData() {
+        logger.debug("getCurrencySortedToData was called.");
         List<Double> sortRes = new ArrayList<>();
         for (int i = currency.size() - 1; i >= 0; i--){
             sortRes.add(currency.get(i));

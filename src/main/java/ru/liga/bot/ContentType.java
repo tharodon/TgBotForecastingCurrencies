@@ -1,5 +1,7 @@
 package ru.liga.bot;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
@@ -13,11 +15,15 @@ import java.util.Locale;
 import java.util.Map;
 
 public class ContentType {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     private final SendMessage messageText;
     private final SendPhoto photo;
     private final boolean isGraph;
 
     public ContentType(boolean isGraph) {
+        logger.debug("Вызван конструктор: ContentType");
         if (isGraph){
             photo = new SendPhoto();
             messageText = null;
@@ -26,9 +32,11 @@ public class ContentType {
             photo = null;
         }
         this.isGraph = isGraph;
+        logger.debug("Объект ContentType был успешно создан");
     }
 
     private void setChatId(String chatId){
+        logger.debug("setChatId was called. Определение Id чата для отправки сообщения: " + chatId);
         if (messageText != null){
             messageText.setChatId(chatId);
         }else{
@@ -37,6 +45,7 @@ public class ContentType {
     }
 
     public void setContent(List<Map<LocalDate, Double>> content, String chatId){
+        logger.debug("setContent was called.");
         if (!isGraph){
             Map<LocalDate, Double> value;
             StringBuilder str = new StringBuilder();
@@ -55,6 +64,7 @@ public class ContentType {
             photo.setPhoto(new InputFile(new File("src/main/resources/graf.png")));
         }
         setChatId(chatId);
+        logger.debug("Контент успешно добавлен");
     }
 
     public boolean isGraph() {

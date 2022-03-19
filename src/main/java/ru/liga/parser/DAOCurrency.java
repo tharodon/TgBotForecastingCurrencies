@@ -1,5 +1,7 @@
 package ru.liga.parser;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import ru.liga.CurrencyRepository;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -8,12 +10,13 @@ import java.time.LocalDate;
 import java.util.*;
 
 public class DAOCurrency implements CurrencyRepository {
-
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     public DAOCurrency() {
     }
 
     public DateAndCurrencies getInfo(String currency) throws IOException {
+        logger.debug("getInfo was called. Обращение к базе данных, получение истории курсов");
         DateAndCurrencies dateAndCurrencies = new DateAndCurrencies();
         try(FileReader file = new FileReader("src/main/resources/"
                 + currency + "_F01_02_2005_T05_03_2022.csv");){
@@ -33,9 +36,10 @@ public class DAOCurrency implements CurrencyRepository {
             }
             scan.close();
         }catch (Exception e){
-            System.out.println("Ошибка данных");
+            logger.debug("Ошибка данных");
             throw new FileNotFoundException("Please, choose legal currency");
         }
+        logger.debug("Информация об истории курсов получена");
         return dateAndCurrencies;
     }
 }
