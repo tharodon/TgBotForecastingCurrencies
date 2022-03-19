@@ -14,9 +14,9 @@ public class StartCommand extends ServiceCommand {
 
     @Override
     public void execute(AbsSender absSender, User user, Chat chat, String[] strings) {
-        String userName = (user.getUserName() != null) ? user.getUserName() :
-                String.format("%s %s", user.getLastName(), user.getFirstName());
-        sendAnswer(absSender, chat.getId(), this.getCommandIdentifier(), userName,
-                "Привет)\n" + "Рад тебя видеть. Воспользуйся командой '/help' если где-то запутаешься)");
+            String userName = (user.getUserName() != null) ? user.getUserName() :
+                    String.format("%s %s", user.getLastName(), user.getFirstName());
+            sendAnswer(absSender, chat.getId(), this.getCommandIdentifier(), userName,
+                    "Привет)\n" + "Рад тебя видеть. Воспользуйся командой '/help' если где-то запутаешься)");
     }
 }

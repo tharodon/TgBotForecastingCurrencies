@@ -30,7 +30,7 @@
 22:36:39.365  24559 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.ArgsBuilderImpl - .plot command: plt.title("Forecasting")
 22:36:39.366  24560 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_3ba8f369_04e5_4fa0_8cc9_77bdae530efd = plt.savefig("src/main/resources/graf.png",dpi=200.0)
 22:36:39.371  24565 [thardon_bot Telegram Executor] DEBUG c.g.sh0nk.matplotlib4j.PyCommand - Commands... : [python, /var/folders/zz/zyxvpxvq6csfxvn_n003vlwm00ywz5/T/1647632199367-0/exec.py]
-22:36:40.148  25342 [thardon_bot Telegram Executor] WARN  c.g.sh0nk.matplotlib4j.PyCommand - 
+22:36:40.148  25342 [thardon_bot Telegram Executor] WARN  c.g.sh0nk.matplotlib4j.PyCommand -
 22:36:40.150  25344 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Начинается определение необходимости вывода графика
 22:36:40.150  25344 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График нужен
 22:57:55.334  850  [main] DEBUG ru.liga.bot.Bot - Начинается создание бота
@@ -79,7 +79,7 @@
 23:03:24.008  6852 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.ArgsBuilderImpl - .plot command: plt.title("Forecasting")
 23:03:24.008  6852 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_7a6f5005_7cf4_41de_bee0_cad983f30284 = plt.savefig("src/main/resources/graf.png",dpi=200.0)
 23:03:24.041  6885 [thardon_bot Telegram Executor] DEBUG c.g.sh0nk.matplotlib4j.PyCommand - Commands... : [python, /var/folders/zz/zyxvpxvq6csfxvn_n003vlwm00ywz5/T/1647633804037-0/exec.py]
-23:03:24.795  7639 [thardon_bot Telegram Executor] WARN  c.g.sh0nk.matplotlib4j.PyCommand - 
+23:03:24.795  7639 [thardon_bot Telegram Executor] WARN  c.g.sh0nk.matplotlib4j.PyCommand -
 23:03:24.797  7641 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
 23:03:24.798  7642 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График нужен
 23:03:24.798  7642 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Вызван конструктор: ContentType
@@ -4440,7 +4440,7 @@
 23:16:56.351  12445 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.ArgsBuilderImpl - .plot command: plt.title("Forecasting")
 23:16:56.352  12446 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_5dd90f85_df8e_448b_92cd_ea5111776c78 = plt.savefig("src/main/resources/graf.png",dpi=200.0)
 23:16:56.358  12452 [thardon_bot Telegram Executor] DEBUG c.g.sh0nk.matplotlib4j.PyCommand - Commands... : [python, /var/folders/zz/zyxvpxvq6csfxvn_n003vlwm00ywz5/T/1647634616353-0/exec.py]
-23:16:57.190  13284 [thardon_bot Telegram Executor] WARN  c.g.sh0nk.matplotlib4j.PyCommand - 
+23:16:57.190  13284 [thardon_bot Telegram Executor] WARN  c.g.sh0nk.matplotlib4j.PyCommand -
 23:16:57.192  13286 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
 23:16:57.192  13286 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График нужен
 23:16:57.192  13286 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Вызван конструктор: ContentType

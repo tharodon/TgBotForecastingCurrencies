@@ -1,4 +1,4 @@
-package ru.liga;
+package ru.liga.utils;
 
 public class Transate {
     public static String translatorToRussian(String dayOfWeek){
