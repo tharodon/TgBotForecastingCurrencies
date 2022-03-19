@@ -32,8 +32,7 @@ public class DateAndCurrencies {
         return information;
     }
 
-    void available(Double cur, LocalDate date) {
-        logger.debug("available was called.");
+    public void available(Double cur, LocalDate date) {
         if (dates.isEmpty()){
             currency.add(cur);
             dates.add(date);

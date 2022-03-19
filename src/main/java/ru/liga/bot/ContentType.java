@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
-import ru.liga.Transate;
+import ru.liga.utils.Transate;
 
 import java.io.File;
 import java.time.LocalDate;

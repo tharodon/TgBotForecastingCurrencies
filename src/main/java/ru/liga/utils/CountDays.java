@@ -1,4 +1,4 @@
-package ru.liga;
+package ru.liga.utils;
 
 public enum CountDays {;
     public static final int DAYS_OF_WEEK = 7;

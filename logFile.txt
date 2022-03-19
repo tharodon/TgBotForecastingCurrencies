@@ -8,8 +8,8 @@
 14:53:45.659  24535 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
 14:53:45.659  24535 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date 21.03.2099 -alg actual
 14:53:45.659  24535 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date 21.03.2099 -alg actual
-14:53:45.747  24623 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - forecasting was called. Начало вычислений
-14:53:45.747  24623 [thardon_bot Telegram Executor] INFO  ru.liga.Forecasting - Начало вычислений
+14:53:45.747  24623 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+14:53:45.747  24623 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
 14:53:45.748  24624 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
 14:53:45.748  24624 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
 14:53:45.748  24624 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
@@ -20,7 +20,7 @@
 14:53:45.748  24624 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Проверка на валидность данных успешно пройдена
 14:53:45.748  24624 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getCurrency was called. Начинается определение заданных валют
 14:53:45.748  24624 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Заданные валюты успешно определены: [EUR]
-14:53:45.749  24625 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
+14:53:45.749  24625 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
 14:53:45.784  24660 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 14:53:45.784  24660 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 14:53:45.795  24671 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
@@ -4254,15 +4254,15 @@
 14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
-14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DAOCurrency - Информация об истории курсов получена
+14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - Информация об истории курсов получена
 14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
 14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
 14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getAlgorithm was called. Получение выбранного алгоритма...
 14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм получен: ACTUAL
-14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - Начало вычислений по алгоритму "Актуальный"
+14:53:45.878  24754 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - Начало вычислений по алгоритму "Актуальный"
 14:53:45.879  24755 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
 14:53:45.879  24755 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
-14:53:45.879  24755 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - forecastActual was called
+14:53:45.879  24755 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecastActual was called
 14:55:36.565  135441 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - ERROR: null
 14:55:39.988  138864 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - setAnswer was called.
 14:55:42.167  141043 [thardon_bot Telegram Executor] ERROR o.t.t.u.DefaultBotSession - text is marked non-null but is null
@@ -4284,8 +4284,8 @@ java.lang.NullPointerException: text is marked non-null but is null
 15:06:52.324  12647 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
 15:06:52.324  12647 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date 21.03.2099 -alg linear
 15:06:52.324  12647 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date 21.03.2099 -alg linear
-15:06:52.327  12650 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - forecasting was called. Начало вычислений
-15:06:52.327  12650 [thardon_bot Telegram Executor] INFO  ru.liga.Forecasting - Начало вычислений
+15:06:52.327  12650 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+15:06:52.327  12650 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
 15:06:52.329  12652 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
 15:06:52.329  12652 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
 15:06:52.329  12652 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
@@ -4296,7 +4296,7 @@ java.lang.NullPointerException: text is marked non-null but is null
 15:06:52.329  12652 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Проверка на валидность данных успешно пройдена
 15:06:52.329  12652 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getCurrency was called. Начинается определение заданных валют
 15:06:52.329  12652 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Заданные валюты успешно определены: [EUR]
-15:06:52.329  12652 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
+15:06:52.329  12652 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
 15:06:52.333  12656 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:06:52.334  12657 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:06:52.338  12661 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
@@ -8530,13 +8530,13 @@ java.lang.NullPointerException: text is marked non-null but is null
 15:06:52.415  12738 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
-15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DAOCurrency - Информация об истории курсов получена
+15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - Информация об истории курсов получена
 15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
 15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
 15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getAlgorithm was called. Получение выбранного алгоритма...
 15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм получен: LINEAR
-15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - Начало вычислений по алгоритму "Линейная регрессия"
-15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - forecastLinearregression was called
+15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - Начало вычислений по алгоритму "Линейная регрессия"
+15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecastLinearregression was called
 15:06:52.416  12739 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - getCurrencySortedToData was called.
 15:06:52.417  12740 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
 15:06:52.417  12740 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График не нужен
@@ -8554,8 +8554,8 @@ java.lang.NullPointerException: text is marked non-null but is null
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date 21.03.2023 -alg actual
 15:07:01.496  21819 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date 21.03.2023 -alg actual
-15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - forecasting was called. Начало вычислений
-15:07:01.496  21819 [thardon_bot Telegram Executor] INFO  ru.liga.Forecasting - Начало вычислений
+15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+15:07:01.496  21819 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
@@ -8566,7 +8566,7 @@ java.lang.NullPointerException: text is marked non-null but is null
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Проверка на валидность данных успешно пройдена
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getCurrency was called. Начинается определение заданных валют
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Заданные валюты успешно определены: [EUR]
-15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
+15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:07:01.496  21819 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
@@ -12800,15 +12800,15 @@ java.lang.NullPointerException: text is marked non-null but is null
 15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
-15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DAOCurrency - Информация об истории курсов получена
+15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - Информация об истории курсов получена
 15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
 15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
 15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getAlgorithm was called. Получение выбранного алгоритма...
 15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм получен: ACTUAL
-15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - Начало вычислений по алгоритму "Актуальный"
+15:07:01.548  21871 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - Начало вычислений по алгоритму "Актуальный"
 15:07:01.549  21872 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
 15:07:01.549  21872 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
-15:07:01.549  21872 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - forecastActual was called
+15:07:01.549  21872 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecastActual was called
 15:07:01.549  21872 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
 15:07:01.549  21872 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График не нужен
 15:07:01.549  21872 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
@@ -12825,8 +12825,8 @@ java.lang.NullPointerException: text is marked non-null but is null
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date 21.03.2099 -alg actual
 15:07:04.901  25224 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date 21.03.2099 -alg actual
-15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - forecasting was called. Начало вычислений
-15:07:04.901  25224 [thardon_bot Telegram Executor] INFO  ru.liga.Forecasting - Начало вычислений
+15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+15:07:04.901  25224 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
@@ -12837,7 +12837,7 @@ java.lang.NullPointerException: text is marked non-null but is null
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Проверка на валидность данных успешно пройдена
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getCurrency was called. Начинается определение заданных валют
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Заданные валюты успешно определены: [EUR]
-15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
+15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:07:04.901  25224 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
@@ -17071,17 +17071,253 @@ java.lang.NullPointerException: text is marked non-null but is null
 15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
 15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - available was called.
-15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DAOCurrency - Информация об истории курсов получена
+15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - Информация об истории курсов получена
 15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
 15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
 15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getAlgorithm was called. Получение выбранного алгоритма...
 15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм получен: ACTUAL
-15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - Начало вычислений по алгоритму "Актуальный"
+15:07:04.936  25259 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - Начало вычислений по алгоритму "Актуальный"
 15:07:04.937  25260 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
 15:07:04.937  25260 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
-15:07:04.937  25260 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - forecastActual was called
-15:07:04.937  25260 [thardon_bot Telegram Executor] DEBUG ru.liga.Forecasting - Выбрана некорректная дата прогноза
+15:07:04.937  25260 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecastActual was called
+15:07:04.937  25260 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - Выбрана некорректная дата прогноза
 15:07:04.938  25261 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - ERROR: Выбрана некорректная дата прогноза
 15:07:04.938  25261 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - setAnswer was called.
 15:07:04.938  25261 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
 15:07:05.441  25764 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Не удалось отправить сообщение: Unable to deserialize response
+15:59:30.231  1180 [main] DEBUG ru.liga.bot.Bot - Начинается создание бота
+15:59:30.234  1183 [main] DEBUG ru.liga.bot.Bot - Бот создан
+15:59:30.237  1186 [main] DEBUG ru.liga.bot.Bot - getBotToken was called.
+15:59:30.989  1938 [main] DEBUG ru.liga.bot.Bot - getBotToken was called.
+15:59:30.991  1940 [main] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+15:59:30.994  1943 [main] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+15:59:40.967  11916 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - processNonCommandUpdate was called.
+15:59:40.968  11917 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
+15:59:40.968  11917 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date 21.03.2023 -alg actual
+15:59:40.968  11917 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date 21.03.2023 -alg actual
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+15:59:40.969  11918 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingDate was called. Оперделяется валидность даты/периода прогноза
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Дата прогноза успешно определена
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Проверка на валидность данных успешно пройдена
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getCurrency was called. Начинается определение заданных валют
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Заданные валюты успешно определены: [EUR]
+15:59:40.969  11918 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
+15:59:41.025  11974 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - Информация об истории курсов получена
+15:59:41.026  11975 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
+15:59:41.026  11975 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
+15:59:41.026  11975 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getAlgorithm was called. Получение выбранного алгоритма...
+15:59:41.026  11975 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм получен: ACTUAL
+15:59:41.026  11975 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - Начало вычислений по алгоритму "Актуальный"
+15:59:41.027  11976 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
+15:59:41.027  11976 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
+15:59:41.027  11976 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecastActual was called
+15:59:41.027  11976 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
+15:59:41.027  11976 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График не нужен
+15:59:41.027  11976 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
+15:59:41.027  11976 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График не нужен
+15:59:41.027  11976 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Вызван конструктор: ContentType
+15:59:41.028  11977 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Объект ContentType был успешно создан
+15:59:41.029  11978 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - setContent was called.
+15:59:41.078  12027 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - setChatId was called. Определение Id чата для отправки сообщения: 310384389
+15:59:41.079  12028 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Контент успешно добавлен
+15:59:41.079  12028 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - setAnswer was called.
+15:59:41.079  12028 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
+15:59:41.270  12219 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Не удалось отправить сообщение: Unable to deserialize response
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - processNonCommandUpdate was called.
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date week -alg actual
+15:59:51.581  22530 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса rate EUR -date week -alg actual
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+15:59:51.581  22530 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingDate was called. Оперделяется валидность даты/периода прогноза
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Невалидная дата прогноза
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - ERROR: Incorrect date. Please, write date in format 'dd.MM.yyyy'
+15:59:51.581  22530 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - setAnswer was called.
+15:59:51.582  22531 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
+15:59:51.669  22618 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Не удалось отправить сообщение: Unable to deserialize response
+16:00:04.606  35555 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - processNonCommandUpdate was called.
+16:00:04.606  35555 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
+16:00:04.606  35555 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса rate EUR -period month -alg actual
+16:00:04.606  35555 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса rate EUR -period month -alg actual
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+16:00:04.607  35556 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingDate was called. Оперделяется валидность даты/периода прогноза
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Дата прогноза успешно определена
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Проверка на валидность данных успешно пройдена
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getCurrency was called. Начинается определение заданных валют
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Заданные валюты успешно определены: [EUR]
+16:00:04.607  35556 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
+16:00:04.631  35580 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - Информация об истории курсов получена
+16:00:04.631  35580 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
+16:00:04.641  35590 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
+16:00:04.641  35590 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getAlgorithm was called. Получение выбранного алгоритма...
+16:00:04.641  35590 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм получен: ACTUAL
+16:00:04.641  35590 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - Начало вычислений по алгоритму "Актуальный"
+16:00:04.642  35591 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
+16:00:04.642  35591 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
+16:00:04.642  35591 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecastActual was called
+16:00:04.642  35591 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
+16:00:04.642  35591 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График не нужен
+16:00:04.642  35591 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
+16:00:04.642  35591 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График не нужен
+16:00:04.642  35591 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Вызван конструктор: ContentType
+16:00:04.642  35591 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Объект ContentType был успешно создан
+16:00:04.642  35591 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - setContent was called.
+16:00:04.644  35593 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - setChatId was called. Определение Id чата для отправки сообщения: 310384389
+16:00:04.644  35593 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Контент успешно добавлен
+16:00:04.644  35593 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - setAnswer was called.
+16:00:04.644  35593 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:00:04.763  35712 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Не удалось отправить сообщение: Unable to deserialize response
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - processNonCommandUpdate was called.
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса rate EUR -period month -alg actual -output graph
+16:00:15.454  46403 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса rate EUR -period month -alg actual -output graph
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+16:00:15.454  46403 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingDate was called. Оперделяется валидность даты/периода прогноза
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Дата прогноза успешно определена
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Проверка на валидность данных успешно пройдена
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getCurrency was called. Начинается определение заданных валют
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Заданные валюты успешно определены: [EUR]
+16:00:15.454  46403 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
+16:00:15.471  46420 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - Информация об истории курсов получена
+16:00:15.471  46420 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
+16:00:15.471  46420 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
+16:00:15.471  46420 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getAlgorithm was called. Получение выбранного алгоритма...
+16:00:15.471  46420 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм получен: ACTUAL
+16:00:15.471  46420 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - Начало вычислений по алгоритму "Актуальный"
+16:00:15.472  46421 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
+16:00:15.472  46421 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
+16:00:15.472  46421 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecastActual was called
+16:00:15.472  46421 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
+16:00:15.472  46421 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График нужен
+16:00:15.473  46422 [thardon_bot Telegram Executor] DEBUG ru.liga.graph.GraphDesigner - draw was called.
+16:00:15.485  46434 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_50214c45_a825_4396_a8d8_7daeaf47155a = plt.plot(np.array([1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0]),np.array([160.2664, 157.0941, 159.49200000000002, 159.29500000000002, 159.6279, 158.3482, 157.07139999999998, 158.54559999999998, 158.4571, 155.52300000000002, 155.3576, 156.1313, 156.1313, 156.1313, 155.95080000000002, 155.8071, 156.0569, 156.0738, 155.99630000000002, 155.37369999999999, 155.5958, 154.059, 153.6818, 153.1938, 153.3785, 153.2405, 152.8204, 153.37490000000003, 153.9306, 152.4712]))
+16:00:15.486  46435 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_ad266fd6_9957_4fac_b758_9d753744a419 = plt.ylabel("Currency")
+16:00:15.486  46435 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_8035f344_77f0_45de_8000_0bea76f314b7 = plt.xlabel("Date")
+16:00:15.486  46435 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.ArgsBuilderImpl - .plot command: plt.title("Forecasting")
+16:00:15.486  46435 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_840d40b5_e60a_436d_bd2b_063158165835 = plt.savefig("src/main/resources/graf.png",dpi=200.0)
+16:00:15.505  46454 [thardon_bot Telegram Executor] DEBUG c.g.sh0nk.matplotlib4j.PyCommand - Commands... : [python, /var/folders/zz/zyxvpxvq6csfxvn_n003vlwm00ywz5/T/1647694815490-0/exec.py]
+16:00:16.737  47686 [thardon_bot Telegram Executor] WARN  c.g.sh0nk.matplotlib4j.PyCommand - 
+16:00:16.737  47686 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
+16:00:16.737  47686 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График нужен
+16:00:16.737  47686 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Вызван конструктор: ContentType
+16:00:16.738  47687 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Объект ContentType был успешно создан
+16:00:16.738  47687 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - setContent was called.
+16:00:16.738  47687 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - setChatId was called. Определение Id чата для отправки сообщения: 310384389
+16:00:16.738  47687 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Контент успешно добавлен
+16:00:16.738  47687 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - setAnswer was called.
+16:00:16.738  47687 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:00:17.301  48250 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Не удалось отправить сообщение: Unable to deserialize response
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - processNonCommandUpdate was called.
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса rate EUR -period month -alg linear -output graph
+16:00:30.943  61892 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса rate EUR -period month -alg linear -output graph
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+16:00:30.943  61892 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingDate was called. Оперделяется валидность даты/периода прогноза
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Дата прогноза успешно определена
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Проверка на валидность данных успешно пройдена
+16:00:30.943  61892 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getCurrency was called. Начинается определение заданных валют
+16:00:30.944  61893 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Заданные валюты успешно определены: [EUR]
+16:00:30.944  61893 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
+16:00:30.957  61906 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - Информация об истории курсов получена
+16:00:30.957  61906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
+16:00:30.957  61906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
+16:00:30.957  61906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getAlgorithm was called. Получение выбранного алгоритма...
+16:00:30.957  61906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм получен: LINEAR
+16:00:30.957  61906 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - Начало вычислений по алгоритму "Линейная регрессия"
+16:00:30.957  61906 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecastLinearregression was called
+16:00:30.957  61906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.DateAndCurrencies - getCurrencySortedToData was called.
+16:00:30.958  61907 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
+16:00:30.958  61907 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График нужен
+16:00:30.958  61907 [thardon_bot Telegram Executor] DEBUG ru.liga.graph.GraphDesigner - draw was called.
+16:00:30.960  61909 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_e01febbf_d295_4018_9325_53e59eaaa47a = plt.plot(np.array([1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0]),np.array([123.32780425658135, 124.31876723767145, 125.30973021876156, 126.30069319985165, 127.29165618094174, 128.28261916203184, 129.27358214312196, 130.26454512421205, 131.25550810530214, 132.24647108639226, 133.23743406748235, 134.22839704857245, 135.21936002966254, 136.21032301075266, 137.20128599184275, 138.19224897293284, 139.18321195402297, 140.17417493511306, 141.16513791620315, 142.15610089729324, 143.14706387838334, 144.13802685947346, 145.12898984056355, 146.11995282165367, 147.11091580274376, 148.10187878383385, 149.09284176492395, 150.08380474601404, 151.07476772710413, 152.06573070819425]))
+16:00:30.960  61909 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_ee093523_a1e1_433a_84e5_1df7076a85f2 = plt.ylabel("Currency")
+16:00:30.960  61909 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_0562cff8_c036_40a8_a506_994744dc2a0e = plt.xlabel("Date")
+16:00:30.960  61909 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.ArgsBuilderImpl - .plot command: plt.title("Forecasting")
+16:00:30.960  61909 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_9a6455d0_9c09_46df_a807_15b31715bcbc = plt.savefig("src/main/resources/graf.png",dpi=200.0)
+16:00:30.960  61909 [thardon_bot Telegram Executor] DEBUG c.g.sh0nk.matplotlib4j.PyCommand - Commands... : [python, /var/folders/zz/zyxvpxvq6csfxvn_n003vlwm00ywz5/T/1647694830960-0/exec.py]
+16:00:31.408  62357 [thardon_bot Telegram Executor] WARN  c.g.sh0nk.matplotlib4j.PyCommand - 
+16:00:31.409  62358 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
+16:00:31.409  62358 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График нужен
+16:00:31.409  62358 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Вызван конструктор: ContentType
+16:00:31.409  62358 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Объект ContentType был успешно создан
+16:00:31.409  62358 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - setContent was called.
+16:00:31.409  62358 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - setChatId was called. Определение Id чата для отправки сообщения: 310384389
+16:00:31.409  62358 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Контент успешно добавлен
+16:00:31.409  62358 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - setAnswer was called.
+16:00:31.409  62358 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:00:31.893  62842 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Не удалось отправить сообщение: Unable to deserialize response
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - processNonCommandUpdate was called.
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса rate EUR -period month -alg mystical -output graph
+16:00:44.946  75895 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса rate EUR -period month -alg mystical -output graph
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+16:00:44.946  75895 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingDate was called. Оперделяется валидность даты/периода прогноза
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм выбран верно
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Дата прогноза успешно определена
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Проверка на валидность данных успешно пройдена
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getCurrency was called. Начинается определение заданных валют
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Заданные валюты успешно определены: [EUR]
+16:00:44.946  75895 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
+16:00:44.957  75906 [thardon_bot Telegram Executor] DEBUG ru.liga.database.DAOCurrency - Информация об истории курсов получена
+16:00:44.957  75906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
+16:00:44.957  75906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
+16:00:44.957  75906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getAlgorithm was called. Получение выбранного алгоритма...
+16:00:44.957  75906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Алгоритм получен: MYSTICAL
+16:00:44.957  75906 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - Начало вычислений по алгоритму "Мистичесикй"
+16:00:44.957  75906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - getDates was called. Получение периода прогноза
+16:00:44.957  75906 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Период прогноза успешно получен
+16:00:44.957  75906 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecastMystical was called
+16:00:44.958  75907 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
+16:00:44.958  75907 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График нужен
+16:00:44.958  75907 [thardon_bot Telegram Executor] DEBUG ru.liga.graph.GraphDesigner - draw was called.
+16:00:44.959  75908 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_c6a06ef4_2c83_424e_9574_085adc98d1f9 = plt.plot(np.array([1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0, 18.0, 19.0, 20.0, 21.0, 22.0, 23.0, 24.0, 25.0, 26.0, 27.0, 28.0, 29.0, 30.0]),np.array([91.51530000000001, 94.89060589882304, 100.99043342255972, 91.35057952255323, 87.09327968183453, 80.0804165063848, 87.98350777461295, 79.52106676926427, 75.45166090934767, 76.65930663833598, 70.11428083635563, 74.10398436366788, 71.42431205629683, 71.72242449783086, 75.97614363377957, 82.66497467197851, 79.9696576751812, 80.15177124640378, 82.42566082300209, 87.20344166321728, 80.456827202427, 84.95514579398888, 76.83001180569404, 69.32822487878879, 72.96637331419812, 72.9311587934958, 67.94471673674796, 74.0120191179467, 67.6901209744049, 71.07264774897179]))
+16:00:44.959  75908 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_d1913685_f917_45c8_a174_3d683e13988e = plt.ylabel("Currency")
+16:00:44.959  75908 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_9453c2eb_9c9f_492d_8dd3_0a3c0b669f05 = plt.xlabel("Date")
+16:00:44.959  75908 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.ArgsBuilderImpl - .plot command: plt.title("Forecasting")
+16:00:44.959  75908 [thardon_bot Telegram Executor] DEBUG c.g.s.m.builder.CompositeBuilder - .plot command: ret_53f52c8b_5a45_4710_87d3_734da86b3d53 = plt.savefig("src/main/resources/graf.png",dpi=200.0)
+16:00:44.959  75908 [thardon_bot Telegram Executor] DEBUG c.g.sh0nk.matplotlib4j.PyCommand - Commands... : [python, /var/folders/zz/zyxvpxvq6csfxvn_n003vlwm00ywz5/T/1647694844959-0/exec.py]
+16:00:45.404  76353 [thardon_bot Telegram Executor] WARN  c.g.sh0nk.matplotlib4j.PyCommand - 
+16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isGraph was called. Начинается определение необходимости вывода графика
+16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - График нужен
+16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Вызван конструктор: ContentType
+16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Объект ContentType был успешно создан
+16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - setContent was called.
+16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - setChatId was called. Определение Id чата для отправки сообщения: 310384389
+16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.ContentType - Контент успешно добавлен
+16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - setAnswer was called.
+16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:00:46.533  77482 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Не удалось отправить сообщение: Unable to deserialize response

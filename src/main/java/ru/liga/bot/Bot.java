@@ -8,7 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
-import ru.liga.Forecasting;
+import ru.liga.forecasting.Forecasting;
 import ru.liga.bot.command.StartCommand;
 import ru.liga.parser.InputParser;
 import java.time.DateTimeException;

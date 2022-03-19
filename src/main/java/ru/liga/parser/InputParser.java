@@ -2,12 +2,10 @@ package ru.liga.parser;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.liga.CountDays;
-import ru.liga.bot.Bot;
+import ru.liga.utils.CountDays;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 

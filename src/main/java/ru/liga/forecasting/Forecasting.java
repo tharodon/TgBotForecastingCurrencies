@@ -1,18 +1,14 @@
-package ru.liga;
+package ru.liga.forecasting;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.liga.parser.DAOCurrency;
+import ru.liga.graph.GraphDesigner;
+import ru.liga.linear.LinearRegression;
+import ru.liga.database.DAOCurrency;
 import ru.liga.parser.DateAndCurrencies;
 import ru.liga.parser.InputParser;
 
-import java.io.FileNotFoundException;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.time.DateTimeException;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 public class Forecasting {
@@ -82,7 +78,7 @@ public class Forecasting {
         return res/curr.size();
     }
 
-    public double[] forecastMystical(DateAndCurrencies info, List<LocalDate> forecast){
+    private double[] forecastMystical(DateAndCurrencies info, List<LocalDate> forecast){
         logger.debug("forecastMystical was called");
         Map<LocalDate, Double> currencies = info.getInformation();
         List<Double> fullMoonsCurrencies = new ArrayList<>();
@@ -101,7 +97,7 @@ public class Forecasting {
         return forecastReturn;
     }
 
-    public double[] forecastActual(Map<LocalDate, Double> dateAndCurrencies, List<LocalDate> forecast){
+    private double[] forecastActual(Map<LocalDate, Double> dateAndCurrencies, List<LocalDate> forecast){
         double[] forecastReturn = new double[forecast.size()];
         try{
             logger.debug("forecastActual was called");
@@ -117,7 +113,7 @@ public class Forecasting {
         return forecastReturn;
     }
 
-    public double[] forecastLinearregression(DateAndCurrencies dateAndCurrencies, int[] predictors){
+    private double[] forecastLinearregression(DateAndCurrencies dateAndCurrencies, int[] predictors){
         logger.debug("forecastLinearregression was called");
         Double[] x = new Double[30];
         Double[] y = new Double[30];
