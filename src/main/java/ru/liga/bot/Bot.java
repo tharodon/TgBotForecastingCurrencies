@@ -8,6 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import ru.liga.bot.command.HelpCommand;
 import ru.liga.forecasting.Forecasting;
 import ru.liga.bot.command.StartCommand;
 import ru.liga.parser.InputParser;
@@ -27,6 +28,7 @@ public final class Bot extends TelegramLongPollingCommandBot {
         this.BOT_NAME = botName;
         this.BOT_TOKEN = botToken;
         register(new StartCommand("start", "Старт"));
+        register(new HelpCommand("help", "Помощь"));
         logger.debug("Бот создан");
     }
 

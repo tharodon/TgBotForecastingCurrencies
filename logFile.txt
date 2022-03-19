@@ -17321,3 +17321,53 @@ java.lang.NullPointerException: text is marked non-null but is null
 16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - setAnswer was called.
 16:00:45.404  76353 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
 16:00:46.533  77482 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Не удалось отправить сообщение: Unable to deserialize response
+16:09:38.787  881  [main] DEBUG ru.liga.bot.Bot - Начинается создание бота
+16:09:38.792  886  [main] DEBUG ru.liga.bot.Bot - Бот создан
+16:09:38.798  892  [main] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:09:39.351  1445 [main] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:09:39.352  1446 [main] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:09:39.355  1449 [main] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:10:18.033  496  [main] DEBUG ru.liga.bot.Bot - Начинается создание бота
+16:10:18.037  500  [main] DEBUG ru.liga.bot.Bot - Бот создан
+16:10:18.039  502  [main] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:10:18.727  1190 [main] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:10:18.728  1191 [main] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:10:18.731  1194 [main] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:10:24.734  7197 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:10:24.735  7198 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:10:29.922  12385 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:10:29.922  12385 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - processNonCommandUpdate was called.
+16:10:29.922  12385 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getUserName was called.
+16:10:29.922  12385 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Начинается обработка запроса /help
+16:10:29.922  12385 [thardon_bot Telegram Executor] INFO  ru.liga.bot.Bot - Начинается обработка запроса /help
+16:10:29.925  12388 [thardon_bot Telegram Executor] DEBUG ru.liga.forecasting.Forecasting - forecasting was called. Начало вычислений
+16:10:29.925  12388 [thardon_bot Telegram Executor] INFO  ru.liga.forecasting.Forecasting - Начало вычислений
+16:10:29.927  12390 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isAllOkay was called. Начинается проверка на валидность данных
+16:10:29.927  12390 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - isHavingAlgotithm was called.Определяется был ли выбран алгоритм
+16:10:29.927  12390 [thardon_bot Telegram Executor] DEBUG ru.liga.parser.InputParser - Пользователь подал невалидную команду: Мало аргументов
+16:10:29.927  12390 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - ERROR: Too few arguments
+16:10:29.927  12390 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - setAnswer was called.
+16:10:29.927  12390 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:10:30.093  12556 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - Не удалось отправить сообщение: Unable to deserialize response
+16:11:08.828  521  [main] DEBUG ru.liga.bot.Bot - Начинается создание бота
+16:11:08.831  524  [main] DEBUG ru.liga.bot.Bot - Бот создан
+16:11:08.832  525  [main] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:11:09.314  1007 [main] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:11:09.315  1008 [main] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:11:09.317  1010 [main] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:11:37.838  29531 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:11:37.839  29532 [thardon_bot Telegram Executor] INFO  ru.liga.bot.command.HelpCommand - /help was executed
+16:11:37.839  29532 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.command.HelpCommand - /help was executed
+16:11:37.839  29532 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:12:07.116  516  [main] DEBUG ru.liga.bot.Bot - Начинается создание бота
+16:12:07.119  519  [main] DEBUG ru.liga.bot.Bot - Бот создан
+16:12:07.120  520  [main] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:12:07.608  1008 [main] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:12:07.609  1009 [main] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:12:07.612  1012 [main] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:12:17.096  10496 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:12:17.096  10496 [thardon_bot Telegram Executor] INFO  ru.liga.bot.command.HelpCommand - /help was executed
+16:12:17.096  10496 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.command.HelpCommand - /help was executed
+16:12:17.097  10497 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
+16:12:40.778  34178 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotUsername was called.
+16:12:40.778  34178 [thardon_bot Telegram Executor] DEBUG ru.liga.bot.Bot - getBotToken was called.
