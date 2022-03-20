@@ -50,7 +50,11 @@ public class MysticalAlgorithmTest extends TestCase {
         DateAndCurrencies dateAndCurrencies = new DAOCurrency().getInfo("AMD");
         MysticalAlgorithm mysticalAlgorithm = new MysticalAlgorithm(dateAndCurrencies, dates);
         double[] res = mysticalAlgorithm.forecast();
-        double[] example = {16.80, 16.93, 16.13, 14.56, 14.93, 15.15, 16.58, 18.13, 18.47, 17.14, 18.33, 19.69, 20.83, 19.27, 19.87, 18.31, 17.91, 16.30, 17.11, 17.72, 16.00, 15.65, 15.01, 14.03, 14.80, 13.97, 12.84, 13.89, 12.62, 13.15};
+        double[] example = {16.80, 16.93, 16.13, 14.56,
+                14.93, 15.15, 16.58, 18.13, 18.47, 17.14,
+                18.33, 19.69, 20.83, 19.27, 19.87, 18.31,
+                17.91, 16.30, 17.11, 17.72, 16.00, 15.65,
+                15.01, 14.03, 14.80, 13.97, 12.84, 13.89, 12.62, 13.15};
         for (int i = 0; i < res.length; i++){
             assertEquals(res[i], example[i], 10);
         }

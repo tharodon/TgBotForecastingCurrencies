@@ -1244,3 +1244,7 @@
 22:04:49.470  591  [main] DEBUG ru.liga.parser.Validator - Алгоритм выбран верно
 22:04:49.470  591  [main] DEBUG ru.liga.parser.Validator - Дата прогноза успешно определена
 22:04:49.470  591  [main] DEBUG ru.liga.parser.Validator - Проверка на валидность данных успешно пройдена
+22:13:55.150  159  [main] DEBUG ru.liga.database.DAOCurrency - getInfo was called. Обращение к базе данных, получение истории курсов
+22:13:55.251  260  [main] DEBUG ru.liga.database.DAOCurrency - Информация об истории курсов получена
+22:13:55.281  290  [main] DEBUG r.l.f.a.actual.ActualAlgorithm - forecastActual was called
+22:13:55.281  290  [main] DEBUG r.l.f.a.actual.ActualAlgorithm - Выбрана некорректная дата прогноза

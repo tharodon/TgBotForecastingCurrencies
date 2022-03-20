@@ -27,12 +27,12 @@ public class ActualAlgorithmTest extends TestCase {
         assertThat(actualAlgorithm.forecast()).isEqualTo(new double[]{152.8921});
     }
 
-//    @Test
-//    public void testForecastNotValidDate() throws FileNotFoundException {
-//        List<LocalDate> forecast = Arrays.asList(LocalDate.of(2044, 4, 24));
-//        DateAndCurrencies dates = new DAOCurrency().getInfo("EUR");
-//        assertThatThrownBy(() -> new ActualAlgorithm(dates.getInformation(), forecast).forecast()).isExactlyInstanceOf(NullPointerException.class);
-//    }
+    @Test
+    public void testForecastNotValidDate() throws FileNotFoundException {
+        List<LocalDate> forecast = Arrays.asList(LocalDate.of(2044, 4, 24));
+        DateAndCurrencies dates = new DAOCurrency().getInfo("EUR");
+        assertThatThrownBy(() -> new ActualAlgorithm(dates.getInformation(), forecast).forecast()).isExactlyInstanceOf(IllegalArgumentException.class);
+    }
 
     @Test
     public void testForecastToWeek() throws FileNotFoundException {
