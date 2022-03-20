@@ -1,1 +1,8 @@
+/Users/tharodon/homeworkLiga_forecast/forecast/src/test/java/ru/liga/parser/ValidatorTest.java
+/Users/tharodon/homeworkLiga_forecast/forecast/src/test/java/ru/liga/forecasting/algorithm/actual/ActualAlgorithmTest.java
+/Users/tharodon/homeworkLiga_forecast/forecast/src/test/java/ru/liga/forecasting/algorithm/mystical/MysticalAlgorithmTest.java
 /Users/tharodon/homeworkLiga_forecast/forecast/src/test/java/ru/liga/AppTest.java
+/Users/tharodon/homeworkLiga_forecast/forecast/src/test/java/ru/liga/parser/DateAndCurrenciesTest.java
+/Users/tharodon/homeworkLiga_forecast/forecast/src/test/java/ru/liga/parser/InputParserTest.java
+/Users/tharodon/homeworkLiga_forecast/forecast/src/test/java/ru/liga/forecasting/algorithm/linear/LinearAlgorithmTest.java
+/Users/tharodon/homeworkLiga_forecast/forecast/src/test/java/ru/liga/database/DAOCurrencyTest.java
