@@ -16,7 +16,7 @@ public class DAOCurrency implements CurrencyRepository {
     public DAOCurrency() {
     }
 
-    public DateAndCurrencies getInfo(String currency) throws IOException {
+    public DateAndCurrencies getInfo(String currency) throws FileNotFoundException {
         logger.debug("getInfo was called. Обращение к базе данных, получение истории курсов");
         DateAndCurrencies dateAndCurrencies = new DateAndCurrencies();
         try(FileReader file = new FileReader("src/main/resources/"

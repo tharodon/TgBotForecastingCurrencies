@@ -15,18 +15,19 @@ public class Validator {
         this.input = input;
         strings = input.split(" ");
     }
-    private boolean isHavingAlgotithm() throws Exception {
+
+    private boolean isHavingAlgotithm() {
         logger.debug("isHavingAlgotithm was called.Определяется был ли выбран алгоритм");
         boolean ok = false;
         if (strings.length < 6) {
             logger.debug("Пользователь подал невалидную команду: Мало аргументов");
-            throw new Exception("Too few arguments");
+            throw new IllegalArgumentException("Too few arguments");
         }
 
         for (int i = 0; i < strings.length; i++){
             if (strings[i].equals("-alg")){
                 if (strings[i + 1].isEmpty())
-                    throw new Exception("Please, choose algorithm");
+                    throw new IllegalArgumentException("Please, choose algorithm");
                 switch (strings[i + 1].toUpperCase(Locale.ROOT)){
                     case("LINEAR") :
                     case("MYSTICAL") :
@@ -34,7 +35,7 @@ public class Validator {
                         ok = true; break;
                     default: {
                         logger.debug("Пользователь выбрал невалидный алгоритм");
-                        throw new Exception("Please, choose algorithm");
+                        throw new IllegalArgumentException("Please, choose algorithm");
                     }
                 }
             }
@@ -43,7 +44,7 @@ public class Validator {
         return ok;
     }
 
-    private boolean isHavingDate() throws Exception {
+    private boolean isHavingDate() {
         boolean ok = false;
         logger.debug("isHavingDate was called. Оперделяется валидность даты/периода прогноза");
         ok = isHavingAlgotithm();
@@ -51,7 +52,7 @@ public class Validator {
             if (strings[i].equals("-period")){
                 if (strings[i + 1].isEmpty()) {
                     logger.debug("Невалидный период прогноза");
-                    throw new Exception("Please, choose period or date");
+                    throw new IllegalArgumentException("Please, choose period or date");
                 }
                 switch (strings[i + 1].toLowerCase()){
                     case("week") :
@@ -59,13 +60,13 @@ public class Validator {
                         ok = true; break;
                     default: {
                         logger.debug("Невалидная дата прогноза");
-                        throw new Exception("Please, choose period or date");
+                        throw new IllegalArgumentException("Please, choose period or date");
                     }
                 }
             }else if (strings[i].equals("-date")){
-                if (strings[i + 1].isEmpty() || strings[i + 1].split("\\.").length != 3){
+                if ((strings[i + 1].isEmpty() || strings[i + 1].split("\\.").length != 3) && !strings[i + 1].equals("tomorrow")){
                     logger.debug("Невалидная дата прогноза");
-                    throw new Exception("Incorrect date. Please, write date in format \'dd.MM.yyyy\'");
+                    throw new IllegalArgumentException("Incorrect date. Please, write date in format \'dd.MM.yyyy\'");
                 }
             }
         }
@@ -73,7 +74,7 @@ public class Validator {
         return ok;
     }
 
-    public boolean isAllOkay() throws Exception {
+    public boolean isAllOkay() throws IllegalArgumentException {
         logger.debug("isAllOkay was called. Начинается проверка на валидность данных");
         if (isHavingAlgotithm() && isHavingDate()) {
             logger.debug("Проверка на валидность данных успешно пройдена");

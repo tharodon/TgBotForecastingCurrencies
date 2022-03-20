@@ -1,1 +1,8 @@
 ru/liga/AppTest.class
+ru/liga/parser/DateAndCurrenciesTest.class
+ru/liga/database/DAOCurrencyTest.class
+ru/liga/parser/InputParserTest.class
+ru/liga/forecasting/algorithm/actual/ActualAlgorithmTest.class
+ru/liga/parser/ValidatorTest.class
+ru/liga/forecasting/algorithm/mystical/MysticalAlgorithmTest.class
+ru/liga/forecasting/algorithm/linear/LinearAlgorithmTest.class
